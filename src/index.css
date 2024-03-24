@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-header{
+header {
     text-align: center;
 }
 header img {
@@ -12,3 +12,62 @@ header img {
     filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.4));
 }
 
+li{
+    list-style-type: none;
+}
+
+#game-board{
+    margin-inline: auto;
+    max-width: 45rem;
+    background-color: #F5F5F5;
+    padding: 1rem;
+}
+
+#players{
+    --height-of-input: 2rem;
+    --width-of-input: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: var(--height-of-input);
+    padding: 1rem;
+}
+
+.player-name{
+    display: inline-block;
+    width: 10rem;
+    text-transform: uppercase;
+}
+
+.player input{
+    width: 10rem;
+    animation: pulse-text 2s infinite;
+    border: none;
+    padding: .5rem;
+    background-color: #F5F5F5;
+}
+
+#players button{
+    width: 3rem;
+    padding: .1rem;
+}
+
+.player-id{
+    margin-inline-end: .2rem;
+}
+
+.player input , #players button{
+    font-size: 1rem;
+}
+
+@keyframes pulse-text {
+    0% {
+        color: #1A91DA;
+    }
+    50% {
+        color: #67C5E6;
+    }
+    100% {
+        color: #1A91DA;
+    }
+}

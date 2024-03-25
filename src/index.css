@@ -45,6 +45,7 @@ li{
     background: linear-gradient(#383624, #282617);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-radius: 2rem;
+    position: relative;
 }
 
 #players{
@@ -56,7 +57,7 @@ li{
     height: var(--height-of-input);
     background: #383624;
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 2rem;
 }
 
 .player-name{
@@ -132,7 +133,7 @@ li{
     height: 5rem;
     border: none;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 1rem;
     background: #aca788;
     color: #3f3b00;
     font-family: 'Roboto Slab', sans-serif;
@@ -145,6 +146,56 @@ li{
     border-radius: 4px;
     animation: slide-in-from-left 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
     margin: 0.75rem;
+}
+
+#game-over{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(40, 38, 23, 0.95);
+    animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.65, 0.52) forwards;
+    border-radius: 2rem;
+}
+
+#game-over h2 {
+    font-family: 'Caprasimo', cursive;
+    font-size: 4rem;
+    text-align: center;
+    color: #fcd256;
+    margin: 0;
+}
+
+#game-over p {
+    font-size: 2rem;
+    text-align: center;
+    color: #e1dec7;
+}
+
+#game-over button {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    background: none;
+    border: 2px solid #fcd256;
+    color: #fcd256;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s, color 0.2s;
+    box-shadow: 0 0 8px rgba(255, 187, 0, 0.4);
+}
+
+#game-over button:hover {
+    background: #fcd256;
+    color: #3f3b00;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 187, 0, 0.8);
 }
 
 

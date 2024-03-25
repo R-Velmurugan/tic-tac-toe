@@ -1,4 +1,4 @@
-import "./index.css";
+import "../index.css";
 import {useState} from "react";
 
 var initialGameBoard = [
@@ -11,10 +11,10 @@ export default function GameBoard({onSelectSquare , turns}){
     let gameBoard = initialGameBoard;
 
     for(const turn of turns){
-        const {square , playerSymbol} = turn;
+        const {square , player} = turn;
         const {row , column} = square;
 
-        gameBoard[row][column] = playerSymbol;
+        gameBoard[row][column] = player;
     }
 
     return(
@@ -22,7 +22,7 @@ export default function GameBoard({onSelectSquare , turns}){
             {gameBoard.map((row , rowIndex) => <li key = {rowIndex}>
                 <ol>
                     {row.map((playerSymbol , columnIndex) => <li key = {columnIndex}>
-                        <button onClick={() => {onSelectSquare(rowIndex , columnIndex)}}>
+                        <button onClick={() => {onSelectSquare(rowIndex , columnIndex)}} disabled={playerSymbol !== null}>
                             {playerSymbol}
                         </button>
                     </li>)}
